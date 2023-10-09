@@ -2,7 +2,8 @@ package n1exercici1;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertNotNull;
 
 class MonthsTest {
 
@@ -15,7 +16,7 @@ class MonthsTest {
     @Test
     void MonthsContainsTwelveElements(){
         var Months = new Months();
-        assertEquals(12,Months.setMonths().size());
+        assertEquals(12, Months.setMonths().size());
     }
 
     @Test
