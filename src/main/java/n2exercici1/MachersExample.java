@@ -4,7 +4,7 @@ package n2exercici1;
 import org.hamcrest.FeatureMatcher;
 import org.hamcrest.Matcher;
 
-public class main {
+public class MachersExample {
 
 
         public static Matcher<String> length(Matcher<? super Integer> matcher) {

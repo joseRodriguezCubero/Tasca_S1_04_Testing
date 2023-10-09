@@ -5,6 +5,9 @@
       <item index="0" class="java.lang.String" itemvalue="test" />
     </list>
   </component>
+  <component name="ExcludeFromValidation">
+    <file url="file://$PROJECT_DIR$/src/main/java/n3exercici6/ExampleSix.java" />
+  </component>
   <component name="ExternalStorageConfigurationManager" enabled="true" />
   <component name="MavenProjectsManager">
     <option name="originalFiles">
