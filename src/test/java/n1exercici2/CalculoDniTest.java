@@ -1,68 +1,43 @@
 package n1exercici2;
 
-import org.junit.jupiter.api.Test;
+
+import org.junit.jupiter.api.*;
+import org.junit.jupiter.params.*;
+import org.junit.jupiter.params.provider.Arguments;
+import org.junit.jupiter.params.provider.ArgumentsSource;
+import org.junit.jupiter.params.provider.MethodSource;
+import org.junit.jupiter.params.provider.ValueSource;
+
+import java.util.stream.Stream;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class CalculoDniTest {
 
-    @Test
-    void CalculateCharExpectedZ() {
+
+
+
+    @ParameterizedTest
+    @MethodSource("numberToChar")
+
+    void GivenTenNumbersShouldReturnTenChars(char letra, int number) {
         var calculo = new CalculoDni();
-        assertEquals('Z',calculo.dni(61880640));
+        assertEquals(letra, calculo.dni(number));
     }
 
-    @Test
-    void CalculateCharExpectedE() {
-        var calculo = new CalculoDni();
-        assertEquals('E',calculo.dni(57046600));
-    }
-
-    @Test
-    void CalculateCharExpectedV() {
-        var calculo = new CalculoDni();
-        assertEquals('V',calculo.dni(3954545));
-    }
-
-    @Test
-    void CalculateCharExpectedM() {
-        var calculo = new CalculoDni();
-        assertEquals('M',calculo.dni(17026583));
-    }
-
-    @Test
-    void CalculateCharExpectedH() {
-        var calculo = new CalculoDni();
-        assertEquals('H',calculo.dni(92969261));
-    }
-
-    @Test
-    void CalculateCharExpectedX() {
-        var calculo = new CalculoDni();
-        assertEquals('X',calculo.dni(70043451));
-    }
-
-    @Test
-    void CalculateCharExpectedC() {
-        var calculo = new CalculoDni();
-        assertEquals('C',calculo.dni(71765793));
-    }
-
-    @Test
-    void CalculateCharExpectedJ() {
-        var calculo = new CalculoDni();
-        assertEquals('J',calculo.dni(73883304));
-    }
-
-    @Test
-    void CalculateCharExpectedL() {
-        var calculo = new CalculoDni();
-        assertEquals('L',calculo.dni(16003672));
-    }
-
-    @Test
-    void CalculateCharExpectedP() {
-        var calculo = new CalculoDni();
-        assertEquals('P',calculo.dni(93192535));
+    private static Stream<Arguments> numberToChar(){
+        return Stream.of(
+                Arguments.of('P',93192535),
+                Arguments.of('L',16003672),
+                Arguments.of('J',73883304),
+                Arguments.of('C',71765793),
+                Arguments.of('X',70043451),
+                Arguments.of('Q',16031982),
+                Arguments.of('M',17026583),
+                Arguments.of('B',60882920),
+                Arguments.of('E',57046600),
+                Arguments.of('Y',97136228)
+                        );
     }
 }
