@@ -3,7 +3,7 @@ package n3exercici3;
 public class ArrayComparate  {
 
     private Integer[] array1 = {1,5,8,7,8,9,58,46};
-    private Integer[] array2 = {1,5,8,7,8,9,58,46};
+    private Integer[] array2 =array1;
 
     private Integer[] array3 = {52,35,25,1,5,4,3,};
 

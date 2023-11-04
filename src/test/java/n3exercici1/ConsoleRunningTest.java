@@ -10,7 +10,7 @@ class ConsoleRunningTest {
     void twoConsolesAreEquals() {
         VideoConsole videoConsole1 = new VideoConsole("PS5","Sony");
         VideoConsole videoConsole2 = new VideoConsole("PS5","Sony");
-        assertThat( videoConsole1.equals(videoConsole2));
+        assertThat(videoConsole1).isEqualTo(videoConsole2);
     }
 
     @Test
@@ -20,3 +20,5 @@ class ConsoleRunningTest {
         assertThat(assertThat(videoConsole1).isNotEqualTo(videoConsole2));
     }
 }
+
+

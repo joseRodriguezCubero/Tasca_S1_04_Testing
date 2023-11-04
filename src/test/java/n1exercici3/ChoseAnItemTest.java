@@ -11,7 +11,7 @@ class ChoseAnItemTest {
         var choseAnItem = new ChoseAnItem();
         assertThrows(IndexOutOfBoundsException.class,
                 () -> {
-                    choseAnItem.item(8);
+                    choseAnItem.item(9);
                 });
 
         }
